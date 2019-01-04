@@ -1,3 +1,37 @@
+# What's the difference from the original implementation?
+
+Actually I didn't touch the training part. I only create a new prediction function.
+
+The original prediction functions have some problem to run:
+demo.py depends on a lot of external data, which is actually not necessary.
+test.py uses a discarded model, which is different from the final one.
+
+The new prediction function only needs model design and the pretrained model data. You don't need to train the model to test it.
+
+## The precedure to use the prediction function
+After you install all dependencies, say Numpy, Tensorflow, Keras, OpenCV.
+
+1. Download pre-trained Deep Image Matting [Model](https://github.com/foamliu/Deep-Image-Matting/releases/download/v1.0/final.42-0.0398.hdf5) to "models" folder
+
+2. Run the prediction function
+```bash
+$ python test-new.py -i "test/image.png" -b "test/background.png"
+```
+I have put 2 images there. You may replace it at your will.
+
+## Is there a web version?
+I used to think to port the prediction function to web by using Tensorflow.js or Keras.js. But I found it was hard to do so for the model used some custom layers, which are not supported by Tensorflow.js or Keras.js. Also, the pretrained model file is big than 300M.
+
+If anyone finds a way to do so, please let me know.
+
+## Is the prediction function practical?
+At first, the model supports photos with a fixed size only.
+Secondly, as an amature photographer, I tested some photos and foud the results are not always good. I prefer to use commercial photo tools, such as Photoshop, to do manually.
+
+## BTW, Is AI practical on image matting?
+I am afraid I don't think so, especially for professional photographers. Later, maybe 3D camera will be a revolutionary technology to solve this problem.
+
+=================================== The following are original readme of foamliu/Deep-Image-Matting.
 # Deep Image Matting
 This repository is to reproduce Deep Image Matting.
 
