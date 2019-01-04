@@ -3,6 +3,7 @@
 Actually I didn't touch the training part. I only create a new prediction function.
 
 The original prediction functions have some problem to run:
+
 demo.py depends on a lot of external data, which is actually not necessary.
 test.py uses a discarded model, which is different from the final one.
 
@@ -30,6 +31,8 @@ Secondly, as an amature photographer, I tested some photos and foud the results 
 
 ## BTW, Is AI practical on image matting?
 I am afraid I don't think so, especially for professional photographers. Later, maybe 3D camera will be a revolutionary technology to solve this problem.
+
+
 
 =================================== The following are original readme of foamliu/Deep-Image-Matting.
 # Deep Image Matting
