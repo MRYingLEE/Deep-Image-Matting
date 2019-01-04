@@ -8,7 +8,7 @@ demo.py depends on a lot of external data, which is actually not necessary.
 
 test.py uses a discarded model, which is different from the final one.
 
-The new prediction function only needs model design and the pretrained model data. You don't need to train the model to test it.
+The new prediction function only needs the model design and the pretrained model data. You don't need to train the model to test it.
 
 ## The precedure to use the prediction function
 After you install all dependencies, say Numpy, Tensorflow, Keras, OpenCV.
