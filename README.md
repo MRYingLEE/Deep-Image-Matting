@@ -5,6 +5,7 @@ Actually I didn't touch the training part. I only create a new prediction functi
 The original prediction functions have some problem to run:
 
 demo.py depends on a lot of external data, which is actually not necessary.
+
 test.py uses a discarded model, which is different from the final one.
 
 The new prediction function only needs model design and the pretrained model data. You don't need to train the model to test it.
@@ -20,8 +21,8 @@ $ python test-new.py -i "test/image.png" -b "test/background.png"
 ```
 I have put 2 images there. You may replace it at your will.
 
-## Is there a web version?
-I used to think to port the prediction function to web by using Tensorflow.js or Keras.js. But I found it was hard to do so for the model used some custom layers, which are not supported by Tensorflow.js or Keras.js. Also, the pretrained model file is big than 300M.
+## Is there a browser version?
+I used to think to port the prediction function to web by using Tensorflow.js or Keras.js. But I found it was hard to do so for the model used some custom layers, which are not supported by Tensorflow.js or Keras.js. Also, the pretrained model file is bigger than 300M.
 
 If anyone finds a way to do so, please let me know.
 
